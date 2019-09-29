@@ -1,4 +1,6 @@
 *.dSYM*
+*.o
+*.i
 
 aula*/*
 PSC_*

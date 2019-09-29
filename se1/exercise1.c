@@ -26,29 +26,28 @@ space_to_tab(char *string, int tab_size)
 	// local variables
 	int str_idx = 0;
 	int new_idx = 0;
+	int line = 0;
 	char c = string[str_idx];
 
 	// iterate through all chars in array until the end
 	while (c != '\0') {
-		if ((str_idx % tab_size != 0) ||
-		    (c != ' ')) {
-		    	string[new_idx++] = c;
-			c = string[++str_idx];
-			continue;
-		}
+		if (((str_idx - line) % tab_size == 0) &&
+		    (c == ' ')) {
+			int space_count = 0;
+			for (;space_count < tab_size; ++space_count)
+				if (string[str_idx + space_count] != ' ')
+					break;
 
-		int space_count = 0;
-		for (;space_count < tab_size; ++space_count)
-			if (string[str_idx + space_count] != ' ')
-				break;
-
-		if (space_count == tab_size) {
-			c = '\t';
-			str_idx += tab_size;
-		} else {
-
+			if (space_count == tab_size) {
+				c = '\t';
+				str_idx += tab_size;
+			} else
+				++str_idx;
+		} else
 			++str_idx;
-		}
+
+		if (c == '\n')
+			line += str_idx;
 
 		string[new_idx++] = c;
 		c = string[str_idx];
@@ -65,7 +64,7 @@ main()
 	char str[128] = "123 4567    89AB, CD    EFG HIJK      QWRT";
 
 	printf("String origem:\n");
-	printf("\n%s\n", str);
+	printf("%s\n", str);
 
 	space_to_tab(str, DEFAULT_TAB_SIZE);
 
