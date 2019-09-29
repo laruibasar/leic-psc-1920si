@@ -1,0 +1,20 @@
+Vou para casa, eu    vou para casa
+function int() {
+    int a = 12;
+        char c = "a";
+        char [100] = "Eu vou não sei onde";
+    int b = 1,
+      i = 2;
+}
+
+function teste(int arg1, int arg2,
+               int arg3) {
+    long = 1;
+vs  adac    ;
+}
+
+a   c
+
+1234567890
+a    x  xx
+a    x  xx
