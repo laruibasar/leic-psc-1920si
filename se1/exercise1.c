@@ -1,4 +1,3 @@
-
 /*-
  * SPDX-License-Identifier: BSD-3-Clause
  *
@@ -15,8 +14,7 @@ void space_to_tab	(char *, int);
 /*
  * This change the whitespace ' ' to tab '\t' from the string it receives
  * as an argument.
- * The altered string is stored on the string sent
- * as argument to the function
+ * The altered string is stored on the string sent as argument to the function
  */
 void
 space_to_tab(char *string, int tab_size)
@@ -61,7 +59,7 @@ main()
 {
 	printf("\nStart exercise 1...\n");
 
-	char str[128] = "123 4567    89AB, CD    EFG HIJK      QWRT";
+	char str[128] = "123 4567    89AB,\n    CD    EFG HIJK      QWRT";
 
 	printf("String origem:\n");
 	printf("%s\n", str);
