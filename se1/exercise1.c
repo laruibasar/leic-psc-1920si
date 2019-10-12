@@ -55,7 +55,7 @@ space_to_tab(char *string, int tab_size)
 }
 
 int
-main()
+main(int argc, char *argv[])
 {
 	printf("\nStart exercise 1...\n");
 

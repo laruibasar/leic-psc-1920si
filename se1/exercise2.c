@@ -36,7 +36,7 @@ change_pattern(int value, int nbits, int pattern, int new_pattern)
 }
 
 int
-main()
+main(int argc, char *argv[])
 {
 	printf("\nStart exercise 2...\n");
 	printf("value: %x\tnew value:%x\n", 0x2AD555BC, change_pattern(0x2AD555BC, 5, 0x15, 0x2A));
